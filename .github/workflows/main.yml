@@ -26,7 +26,7 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v1
       - name: Kiuwan Baseline Analysis
-        uses: lsacera/KiuwanActions@v0.4
+        uses: lsacera/KiuwanActions@v1.0
         with:
           # Name of Kiuwan project
           project: juiceshop-kla
@@ -36,4 +36,6 @@ jobs:
           userid: ${{ secrets.KIUWAN_USER }}
           # Password for kiuwan platform
           password: ${{ secrets.KIUWAN_PASS }}
+          # Domain ID for SSO 
+          advancedparams: '--domain-id ${{ secrets.KIUWAN_DOMAINID }}'
 
